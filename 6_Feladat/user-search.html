@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub user keresés</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Főoldal</a>
+      <a href="user-search.html">User keresés</a>
+    </div>
+
+    <div class="container" id="search-section">
+      <h1>GitHub felhasználó keresése</h1>
+
+      <div class="card">
+        <label for="username">Keresett felhasználónév</label>
+        <input id="username" type="text" placeholder="pl. torvalds" autocomplete="off" />
+        <button id="searchBtn" class="btn btn-primary" type="button">Keresés</button>
+      </div>
+
+      <div id="results" aria-live="polite"></div>
+
+      <p> - A GitHub felhasználókeresés token megadása nélkül működik (nincs saját token a kliens oldali kódban).</p>
+      <p> - Mivel a kód githubra kerül, a token beágyazása nyilvánossá válna, ezért nem lenne teljesen biztonságos.</p>
+      <hr>
+      <p> FONTOS: Mivel nincs megadva token, ezért csak 60 keresést lehet végezni percenként és csak a publikus felhasználók kereshetők</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
